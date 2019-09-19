@@ -3,9 +3,12 @@ import React, { Component } from "react";
 export default class SearchBar extends Component {
   render() {
     return (
-      <div>
-        <form>
-          Search: <input type="text" />
+      <div className="ui segment">
+        <form className="ui form">
+          <div className="field">
+            <labe> Image Search</labe>
+            <input type="text" />
+          </div>
         </form>
       </div>
     );
