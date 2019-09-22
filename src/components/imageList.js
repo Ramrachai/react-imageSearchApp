@@ -5,7 +5,12 @@ import "../css/imageList.css";
 
 const ImageList = props => {
   const images = props.src.map(i => {
-    return <img key={i.id} src={i.urls.thumb} alt={i.alt_description} />;
+    return (
+      <a href={i.links.download} target="_blank">
+        {" "}
+        <img key={i.id} src={i.urls.thumb} alt={i.alt_description} />{" "}
+      </a>
+    );
   });
 
   return <div className="image-list">{images}</div>;

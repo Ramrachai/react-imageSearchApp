@@ -25,7 +25,7 @@ export default class app extends Component {
   // }
   onSearchSubmit = async term => {
     const imgResponse = await Unsplash.get("/search/photos", {
-      params: { query: term, per_page: 20 }
+      params: { query: term, per_page: 30 }
     });
     this.setState({ img: imgResponse.data.results });
     console.log(this.state.img);
@@ -34,6 +34,12 @@ export default class app extends Component {
   render() {
     return (
       <div className="ui container" style={{ marginTop: "20px" }}>
+        <h1> React Image search App </h1>
+        <h2> Type any text and press enter </h2>
+        <p>
+          {" "}
+          Images are usually coming from unsplash.com using their website api{" "}
+        </p>
         <SearchBar handleSubmit={this.onSearchSubmit} />
         <p> Total images found: {this.state.img.length} </p>
         <ImageList src={this.state.img} />
