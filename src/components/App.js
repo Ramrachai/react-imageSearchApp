@@ -25,7 +25,7 @@ export default class app extends Component {
   // }
   onSearchSubmit = async term => {
     const imgResponse = await Unsplash.get("/search/photos", {
-      params: { query: term, per_page: 10 }
+      params: { query: term, per_page: 20 }
     });
     this.setState({ img: imgResponse.data.results });
     console.log(this.state.img);
