@@ -1,3 +1,7 @@
+#Live preview link: 
+#  <a href='https://ramrachai.github.io/react-imageSearchApp/'> https://ramrachai.github.io/react-imageSearchApp/ </a>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
